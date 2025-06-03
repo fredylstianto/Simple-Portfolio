@@ -1,0 +1,40 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+:root {
+  font-size: 16px;
+  --brand-primary: #5f1fe9;
+  --brand-accent: #03a9f4;
+  --brand-red: #e44552;
+}
+body {
+  min-height: 100vh;
+  background: #16162b;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+section {
+  position: relative;
+  z-index: 3;
+}
+::-webkit-scrollbar {
+  height: 12px;
+  width: 8px;
+  background: #2b2955;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(120deg, #5f1fe9 12%, #03a9f4 90%);
+  border-radius: 99px;
+}
+
+/* Smooth section scroll */
+html {
+  scroll-padding-top: 68px;
+}
+
+/* Responsive fixes */
+@media (max-width: 767px) {
+  .hero-content { padding-top: 120px;}
+  .about-card { padding: 22px 12px;}
+  .projects-section { padding-top: 72px;}
+}

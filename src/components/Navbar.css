@@ -1,0 +1,40 @@
+.nav-blur {
+  backdrop-filter: blur(10px);
+  background: rgba(12, 8, 24, 0.94) !important;
+  border-bottom: 2.5px solid #5f1fe992;
+  box-shadow: 0 4px 25px 0 #3004e320;
+}
+.brand-gradient {
+  background: linear-gradient(120deg,#e44552 30%, #03a9f4 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+.animate-nav {
+  position: relative;
+  transition: color 0.25s;
+}
+.animate-nav::after {
+  content: "";
+  display: block;
+  height: 2.5px;
+  background: linear-gradient(90deg,#03a9f4,#b86ad9);
+  width: 0;
+  transition: width 0.3s;
+  margin-top:2px;
+}
+.animate-nav:hover,
+.animate-nav:focus {
+  color: #03a9f4 !important;
+}
+.animate-nav:hover::after,
+.animate-nav:focus::after{
+  width: 100%;
+}
+.slideDown-animation {
+  animation: slideDown 1.3s cubic-bezier(.39,.58,.57,1.01);
+}
+@keyframes slideDown {
+  from {transform: translateY(-70px); opacity:0;}
+  to {transform: translateY(0); opacity:1;}
+}

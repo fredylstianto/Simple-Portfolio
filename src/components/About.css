@@ -1,0 +1,46 @@
+.about-section {
+  min-height: 80vh;
+  background: linear-gradient(135deg, #181826 70%, #6f78e6 120%);
+  padding-top: 120px;
+  padding-bottom: 90px;
+  position: relative;
+}
+.about-card {
+  background: rgba(36, 17, 69, 0.70);
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 8px 48px #5f1fe935, 0 1.5px 8px #03a9f4bb;
+  padding: 38px 34px;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  animation: revealSection 1.15s cubic-bezier(.46,.94,.56,1) forwards;
+  opacity: 0;
+}
+@keyframes revealSection {
+  from { 
+    filter: blur(12px);
+    transform: translateY(60px) scale(.95);
+    opacity: 0; 
+  }
+  to { 
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.slideUp-animation {
+  animation: revealSection 1.2s 0.2s forwards;
+  opacity: 0;
+}
+.about-title {
+  letter-spacing: 2px;
+  font-family: 'Montserrat',sans-serif;
+  background: linear-gradient(90deg,#03a9f4, #e44552);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.fg-blue { color: #03a9f4; font-weight: 600; }
+.about-skillset { color: #f6b73c; }
+.about-desc { font-size: 1.14rem; line-height: 1.85; }

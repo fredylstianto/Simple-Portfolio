@@ -1,0 +1,82 @@
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #100c20 55%, #5f1fe9 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero-content {
+  z-index: 2;
+  position: relative;
+  padding-top: 100px;
+}
+.glow-circle {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  width: 520px;
+  height: 380px;
+  background: radial-gradient(ellipse 330px 170px at 50% 50%, #5f1fe9bb 20%, #10101010 83%);
+  z-index: -1;
+  filter: blur(8px);
+  transform: translate(-50%, -53%);
+  pointer-events: none;
+  animation: pulse 3s infinite cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes pulse {
+  0%,100% { opacity: 0.75; transform:translate(-50%,-53%) scale(1);}
+  50% { opacity: 1; transform:translate(-50%,-53%) scale(1.12);}
+}
+.animate-hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight:700;
+  color:#fff;
+  text-shadow: 0 2px 24px #5f1fe9, 0 1px 1px #32009180;
+  letter-spacing: 0.5rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.32s forwards;
+}
+.animate-hero-desc {
+  color: #eee;
+  font-size: 1.45rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.7s forwards;
+  text-shadow: 0 2px 10px #b86ad988;
+}
+.hero-highlight {
+  background: linear-gradient(92deg,#b86ad9 50%,#f6b73c 80%);
+  background-clip: text;
+  -webkit-background-clip:text;
+  color: transparent;
+}
+.btn-glow {
+  background: linear-gradient(90deg,#03a9f4,#e44552 70%);
+  border: none;
+  color: white !important;
+  box-shadow: 0 4px 24px 0 #b86ad988 !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.15s;
+}
+.btn-glow:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 10px 36px 0 #e4455298 !important;
+}
+.colorful {
+  background: linear-gradient(92deg,#03a9f4,#e44552 60%, #b86ad9 100%);
+  background-clip: text;
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.bounceBtn {
+  animation: bounceBtn 1.4s 1.3s infinite alternate cubic-bezier(.2,1,.84,1);
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes bounceBtn {
+  from { transform: scale(1); }
+  to { transform: scale(1.10);}
+}
