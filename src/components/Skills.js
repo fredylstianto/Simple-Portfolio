@@ -6,8 +6,8 @@ import useInView from "./useInView";
 const skillList = [
   { name: "React", level: 94, color: "info" },
   { name: "Bootstrap", level: 92, color: "primary" },
-  { name: "JavaScript", level: 95, color: "warning" },
-  { name: "Billiard", level: 85, color: "success" },
+  { name: "JavaScript", level: 84, color: "warning" },
+  { name: "Roblox", level: 95, color: "success" },
 ];
 
 export default function Skills() {
